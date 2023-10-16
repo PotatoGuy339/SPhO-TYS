@@ -1,0 +1,33 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, total={6.27in, 9.19in}]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{amsmath, mathtools, amsthm}
+\usepackage{thmtools}
+\usepackage{amsfonts}
+\usepackage{graphicx, caption, subcaption}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{siunitx}
+
+%temp
+\usepackage{lipsum}
+%temp
+
+\pagestyle{fancy}
+\theoremstyle{definition}
+\newtheorem{problem}[section]{Question}
+\newtheorem{subproblem}{}[section]
+\renewcommand{\thesubproblem}{(\roman{subproblem})}
+\newcommand{\github}{(insert github link here)}
+
+
+
+\newtheorem{test}[section]{Test}
+
+\begin{document}
+\include{_template_Qns}
+\include{2010Q}
+\include{2011Q}
+
+\end{document}

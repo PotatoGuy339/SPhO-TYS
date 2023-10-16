@@ -26,6 +26,25 @@
 1. A projectile is fired with velocity $v_{0}$ at an angle $\theta$ to the horizontal. \\
 i) The trajectory of the projectile intersects two points, both of which are at a height $h$ above the horizontal. Derive an expression for the horizontal distance $D$ between the two points. [7]  \\
 ii) If the projectile is fired with an initial velocity of $200 \mathrm{~m} \mathrm{~s}^{-1}$, and the barrel of the gun is angled to achieve maximum range, calculate the value of $D$. [3]
+\subsection{Solution 1}
+i) Set:
+\begin{align*}
+    y=v_0\sin \theta\,t-\frac{1}{2}gt^2&=h\\
+    t^2-\frac{2v_0\sin \theta}{g}t+\frac{2h}{g}&=0\\
+    t&=\frac{\frac{2v_0\sin \theta}{g}\pm\sqrt{\left(\frac{2v_0\sin \theta}{g}\right)^2-\frac{8h}{g}}}{2}\\
+    &=\frac{v_0\sin \theta\pm\sqrt{\left(v_0\sin \theta\right)^2-2gh}}{g}
+\end{align*}
+Hence,
+\[\Delta t=\frac{2\sqrt{\left(v_0\sin \theta\right)^2-2gh}}{g}\]
+\begin{align*}
+    D&=v_0\cos\theta\,\Delta t\\
+    &=\frac{2v_0\cos \theta\sqrt{v_0^2\sin^2\theta-2gh}}{g}
+\end{align*}
+ii) At max range, \(\theta=\frac{\pi}{4}\). Hence,
+\begin{align*}
+    D&=\frac{2(200)\frac{\sqrt{2}}{2}\sqrt{(200)^2(\frac{1}{2})-2(9.81)h}}{9.81}\\
+    &=\frac{400\sqrt{10000-9.81h}}{9.81}
+\end{align*}
 
 \subsection{Question 2}
 2. a) A $0.25 \mathrm{~kg}$ mass is attached to an unstretched spring with force constant $20 \mathrm{~N} \mathrm{~m}^{-1}$. The mass is released and oscillates with decaying amplitude, eventually coming to rest. The process is thermodynamically irreversible. Assuming that the temperature of the surroundings remains constant at $27^{\circ} \mathrm{C}$, calculate the change in entropy of the surroundings. [4] \\
