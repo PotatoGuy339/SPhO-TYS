@@ -1,7 +1,8 @@
-\def\sphoyear{2010}
 \setcounter{section}{0}
+\setcounter{solcounter}{0}
+
 % Headers and Descriptions
-\fancyhead[L]{\textbf{SPhO \sphoyear}} \fancyhead[R]{\textbf{Questions}}
+\fancyhead[L]{\textbf{SPhO \sphoyear}} \fancyhead[R]{\textbf{Solutions}}
 
 
 \begin{titlepage}
@@ -11,7 +12,7 @@
 
 \vspace{1cm}
 
-{\LARGE Problem Set}
+{\LARGE Solution Set}
 
 \vspace{2cm}
 
@@ -20,6 +21,11 @@
 \vspace{2cm}
 
 {\Large Edited/Proofread by: Keith Chan, Sun Yu Chieh}
+%Collaborators please feel free to add on!
+
+\vspace{2cm}
+
+{\Large Solutions by: Tan Chien Hao, Keith Chan, Sun Yu Chieh}
 %Collaborators please feel free to add on!
 
 \vspace{2cm}
@@ -59,6 +65,40 @@
     \hfill $[2]$\end{subproblem}
 \end{problem}
 
+\begin{solution}
+    \begin{subsolution}
+        \begin{align}
+	[\hbar] &= \text{kg m}^2 \text{s}^{-1} \\
+	[c] &= \text{m s}^{-1}\\
+	[G] &= \text{m}^3 \text{s}^{-2} \text{kg}^{-1}
+        \end{align}
+        To find $M_{pl}$, let it be $M_{pl}=\hbar^\alpha c^\beta G^\gamma$
+        \begin{align}
+	   [M_{pl}] &= \text{kg}^{\alpha-\gamma} \text{m}^{2\alpha+\beta+3\gamma} \text{s}^{-\alpha-\beta-2\gamma} \\
+	    \alpha-\gamma &= 1\\
+	   2\alpha+\beta+3\gamma &= 0\\
+	   -\alpha-\beta-2\gamma &=0
+        \end{align}
+        Solving, 
+\[\alpha=\frac{1}{2}, \beta=\frac{1}{2}, \gamma=-\frac{1}{2}\]
+        Hence, $M_{pl} = \sqrt{\frac{\hbar c}{G}}$\\
+        Repeating the procedure for $l_{pl}$ and $t_{pl}$, we find
+\[l_pl = \sqrt{\frac{\hbar G}{c^3}}, \quad t_{pl} = \sqrt{\frac{\hbar G}{c^5}}\]
+    \end{subsolution}
+    
+    \begin{subsolution}
+        Direct substitution of constants into $M_{pl} = \sqrt{\frac{\hbar c}{G}}$ gives us $M_{pl} = 2.18 \times 10^{-8} \text{ kg}$.
+    \end{subsolution}
+    
+    \begin{subsolution}
+        The Compton wavelength is given by $\lambda_{comp} = \frac{h}{mc}$. So
+        \begin{align} 
+	|E_{grav}| &= \frac{G m_e^2}{\left(\frac{h}{m_e c}\right) } = \frac{Gm_e^3 c}{h} \\
+	\left|  \frac{E_{grav}}{m_e c^2} \right| &= \frac{Gm_e^2}{ch} = 2.79 \times 10^{-46}
+\end{align}
+    \end{subsolution}
+\end{solution}
+
 \begin{problem}
     A block of mass $M$ rests on a fixed plane inclined at angle $\theta$. A horizontal force of $Mg$ is applied to the block, as shown in Fig. \ref{2010q2}. The coefficient of static friction between the block and the plane is $\mu$.
     \begin{figure}[h]
@@ -75,6 +115,17 @@
     \hfill{[11]}\end{subproblem}
 \end{problem}
 
+\begin{solution}
+\centering
+\includegraphics[width=0.3\linewidth]{spho_book_TYS_images/2010q2_2.png}
+    \begin{subsolution}
+        I don't think it's possible to express $N, F_f$ purely in terms of $M,\mu$. It will depend on angle $\theta$ as well.
+        Balancing forces parallel to the slope, \[M_{g} \cos \theta+{I}_{f}-m g \sin \theta=0\]
+        Balancing forces perpendicular to the slope, \[N=M g(\sin \theta+\cos \theta)\]
+        Lastly, the frictional force satisfies the inequality \[\left|F_{f}\right| \leq \mu N\]
+        Now we just need to solve this to get \[F_{g}=-M_{g}(\sin \theta-\cos \theta)\] and \[N=M_{g}(\sin \theta+\cos \theta)\]
+    \end{subsolution}
+\end{solution}
 
 \begin{problem}
 A mobile is formed by supporting four metal butterflies of equal mass $m$ from a string of length $L$. The points of support are evenly spaced a distance $\ell$ apart as shown in Figure \ref{2010q3}. The string forms an angle $\theta_{1}$ with the ceiling at each end point. The center section of string is horizontal. 
@@ -102,7 +153,6 @@ A mobile is formed by supporting four metal butterflies of equal mass $m$ from a
 \begin{problem}
     A $\qty{670}{\kg}$ meteorite is composed of aluminium. At a distance far from the Earth, its temperature is $\qty{-15}{\degreeCelsius}$ and it moves with a speed of $\qty{14.0}{\km\per\s}$ relative to the Earth. As it crashes into the planet, the resulting additional internal energy is shared equally between the meteor and the planet. Assuming that all of the material of the meteor rises momentarily to the same final temperature, determine this temperature. You may also assume that the specific heat of liquid and of gaseous aluminium is $\qty{1170}{\J\per\kg\per\K}$, the latent heat of fusion and vaporisation of aluminium are $\qty{3.97e5}{\J\per\kg}$ and $\qty{1.14e7}{\J\per\kg}$ respectvely, and the melting point and boiling point of aluminium are $\qty{660}{\K}$ and $\qty{2450}{\K}$ respectively.
 \hfill{[10]}\end{problem}
-
 
 \begin{problem}
     A pion at rest with a mass $m_{\pi}$ decays to a muon of mass $m_{\mu}$ and an antineutrino of negligible mass. The reaction is written as $\pi^{-} \rightarrow \mu^{-}+\bar{\nu}$. Calculate the kinetic energy of the muon and the energy of the antineutrino in electron volts. You may take $m_{\pi}=273 m_{e}$ and $m_{\mu}=207 m_{e}$ where $m_{e}$ is the rest mass of the electron.

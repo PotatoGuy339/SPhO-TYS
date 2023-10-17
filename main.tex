@@ -6,14 +6,16 @@
 \usepackage{thmtools}
 \usepackage{amsfonts}
 \usepackage{graphicx, caption, subcaption}
-\usepackage{tikz}
+\usepackage{tikz, tcolorbox}
 \usepackage{fancyhdr}
+\setlength{\headheight}{14.49998pt}
 \usepackage{siunitx}
+\usepackage{float}
 
 %temp
 \usepackage{lipsum}
 %temp
-
+\mathtoolsset{showonlyrefs}  
 \pagestyle{fancy}
 \theoremstyle{definition}
 \newtheorem{problem}[section]{Question}
@@ -22,12 +24,46 @@
 \newcommand{\github}{(insert github link here)}
 
 
+\newtcolorbox{sol}[1]{
+    % Set box style
+    % Dimensions and layout
+        width=\textwidth,
+        toptitle=2pt,
+        bottomtitle=2pt,
+    % Coloring
+        colbacktitle=black,
+        coltitle=white,
+        colback=white,
+        colframe=black,
+    % Title formatting
+        title={
+            Solution #1. \hfill 
+        },
+        fonttitle=\bfseries
+    }
+
+\newcounter{solcounter}
+
+\newenvironment{solution}{
+   \refstepcounter{solcounter}
+   \begin{sol}{\thesolcounter}
+    }
+  {
+       \end{sol}
+ }
+
+\newtheorem{subsolution}{}[problem]
+\renewcommand{\thesubsolution}{(\roman{subsolution})}
+    
 
 \newtheorem{test}[section]{Test}
 
 \begin{document}
 \include{_template_Qns}
+\include{_template_Sols}
 \include{2010Q}
+\include{2010S}
 \include{2011Q}
+\include{2019Q}
 
 \end{document}
