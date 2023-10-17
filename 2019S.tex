@@ -1,0 +1,400 @@
+\def\sphoyear{2019}
+\setcounter{section}{0}
+\setcounter{solcounter}{0}
+
+% Headers and Descriptions
+\fancyhead[L]{\textbf{SPhO \sphoyear}} \fancyhead[R]{\textbf{Solutions}}
+
+
+\begin{titlepage}
+\centering
+
+{\Huge\bfseries SPhO \sphoyear}
+
+\vspace{1cm}
+
+{\LARGE Solution Set}
+
+\vspace{2cm}
+
+{\Large Compiled by: Tan Chien Hao, \texttt{www.tchlabs.net}}
+
+\vspace{2cm}
+
+{\Large Edited/Proofread by: Keith Chan, Sun Yu Chieh}
+%Collaborators please feel free to add on!
+
+\vspace{2cm}
+
+{\Large Solutions by: Tan Chien Hao, Keith Chan, Sun Yu Chieh}
+%Collaborators please feel free to add on!
+
+\vspace{2cm}
+
+{\large Suggest changes at: \github}
+
+
+\vfill
+
+{\itshape Last edited: \today}
+\end{titlepage}
+
+\begin{problem}
+    A projectile is fired with velocity $v_{0}$ at an angle $\theta$ to the horizontal.
+    \begin{subproblem}
+    The trajectory of the projectile intersects two points, both of which are at a height $h$ above the horizontal. Derive an expression for the horizontal distance $D$ between the two points.
+    \hfill{[7]}\end{subproblem}
+    \begin{subproblem}
+    If the projectile is fired with an initial velocity of $\qty{200}{\m\per\s}$, and the barrel of the gun is angled to achieve maximum range, calculate the value of $D$.
+    \hfill{[3]}\end{subproblem}
+\end{problem}
+
+\begin{solution}
+    \begin{subsolution}
+        Set:
+        \begin{align*}
+            y=v_0\sin \theta\,t-\frac{1}{2}gt^2&=h\\
+            t^2-\frac{2v_0\sin \theta}{g}t+\frac{2h}{g}&=0\\
+            t&=\frac{\frac{2v_0\sin \theta}{g}\pm\sqrt{\left(\frac{2v_0\sin \theta}{g}\right)^2-\frac{8h}{g}}}{2}\\
+            &=\frac{v_0\sin \theta\pm\sqrt{\left(v_0\sin \theta\right)^2-2gh}}{g}
+        \end{align*}
+        Hence,
+        \[\Delta t=\frac{2\sqrt{\left(v_0\sin \theta\right)^2-2gh}}{g}\]
+        \begin{align*}
+            D&=v_0\cos\theta\,\Delta t\\
+            &=\boxed{\frac{2v_0\cos \theta\sqrt{v_0^2\sin^2\theta-2gh}}{g}}
+        \end{align*}
+    \end{subsolution}
+    \tcblower
+    \begin{subsolution}
+        At max range, \(\theta=\frac{\pi}{4}\). Hence,
+        \begin{align*}
+            D&=\frac{2(200)\frac{\sqrt{2}}{2}\sqrt{(200)^2(\frac{1}{2})-2(9.81)h}}{9.81}\\
+            &=\boxed{\frac{400\sqrt{10000-9.81h}}{9.81}}
+        \end{align*}
+        \textit{Author's note: idk why $h$ isnt given}
+    \end{subsolution}
+\end{solution}
+
+\begin{problem}
+    \begin{subproblem}
+        A $\qty{0.25}{\kg}$ mass is attached to an unstretched spring with force constant $\qty{20}{\N\per\m}$. The mass is released and oscillates with decaying amplitude, eventually coming to rest. The process is thermodynamically irreversible. Assuming that the temperature of the surroundings remains constant at $\qty{27}{\degreeCelsius}$, calculate the change in entropy of the surroundings.
+    \hfill{[4]}\end{subproblem}
+    \begin{subproblem}
+        The intensity of sunlight reaching the surface of the Earth is $\qty{1.37e3}{\W\per\square\m}$. Given that the radius of the Sun is $\qty{6.957e5}{\km}$, and the orbital radius of the Earth about the Sun is $\qty{1.496e8}{\km}$, estimate the surface temperature of the Sun.
+    \hfill{[3]}\end{subproblem}
+    \begin{subproblem}
+        Given that the orbital radius of Mars about the Sun is $\qty{2.280e8}{\km}$, estimate the equilibrium temperature of Mars. 
+    \hfill{[3]}\end{subproblem}
+\end{problem}
+
+\begin{solution}
+    \begin{subsolution}
+        At the end, at mechanical equilibrium, the mass will be below the starting point by a distance of $\frac{mg}{k}$.
+        
+        \begin{center}
+        \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+        
+        \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1.2,xscale=1.2]
+        %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+        
+        %Shape: Spring [id:dp8544987247761792] 
+        \draw   (148.5,124.6) .. controls (144.05,123.98) and (139.6,121.23) .. (139.6,115.73) .. controls (139.6,104.73) and (157.4,104.73) .. (157.4,110.73) .. controls (157.4,116.73) and (139.6,116.73) .. (139.6,105.73) .. controls (139.6,94.73) and (157.4,94.73) .. (157.4,100.73) .. controls (157.4,106.73) and (139.6,106.73) .. (139.6,95.73) .. controls (139.6,84.73) and (157.4,84.73) .. (157.4,90.73) .. controls (157.4,96.73) and (139.6,96.73) .. (139.6,85.73) .. controls (139.6,74.73) and (157.4,74.73) .. (157.4,80.73) .. controls (157.4,86.73) and (139.6,86.73) .. (139.6,75.73) .. controls (139.6,64.73) and (157.4,64.73) .. (157.4,70.73) .. controls (157.4,76.73) and (139.6,76.73) .. (139.6,65.73) .. controls (139.6,54.73) and (157.4,54.73) .. (157.4,60.73) .. controls (157.4,66.73) and (139.6,66.73) .. (139.6,55.73) .. controls (139.6,55.34) and (139.62,54.96) .. (139.67,54.6) ;
+        %Straight Lines [id:da8256797588256323] 
+        \draw    (326.8,54) -- (60,54) ;
+        %Shape: Circle [id:dp7878421000249572] 
+        \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (140.8,127.6) .. controls (140.8,122.96) and (144.56,119.2) .. (149.2,119.2) .. controls (153.84,119.2) and (157.6,122.96) .. (157.6,127.6) .. controls (157.6,132.24) and (153.84,136) .. (149.2,136) .. controls (144.56,136) and (140.8,132.24) .. (140.8,127.6) -- cycle ;
+        %Shape: Spring [id:dp31755087966231166] 
+        \draw   (271.3,152.56) .. controls (266.85,151.68) and (262.4,148.43) .. (262.4,141.93) .. controls (262.4,128.93) and (280.2,128.93) .. (280.2,134.93) .. controls (280.2,140.93) and (262.4,140.93) .. (262.4,127.93) .. controls (262.4,114.93) and (280.2,114.93) .. (280.2,120.93) .. controls (280.2,126.93) and (262.4,126.93) .. (262.4,113.93) .. controls (262.4,100.93) and (280.2,100.93) .. (280.2,106.93) .. controls (280.2,112.93) and (262.4,112.93) .. (262.4,99.93) .. controls (262.4,86.93) and (280.2,86.93) .. (280.2,92.93) .. controls (280.2,98.93) and (262.4,98.93) .. (262.4,85.93) .. controls (262.4,72.93) and (280.2,72.93) .. (280.2,78.93) .. controls (280.2,84.93) and (262.4,84.93) .. (262.4,71.93) .. controls (262.4,58.93) and (280.2,58.93) .. (280.2,64.93) .. controls (280.2,70.93) and (262.4,70.93) .. (262.4,57.93) .. controls (262.4,56.71) and (262.56,55.6) .. (262.84,54.6) ;
+        %Shape: Circle [id:dp013652058443060056] 
+        \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (263.6,154.8) .. controls (263.6,150.16) and (267.36,146.4) .. (272,146.4) .. controls (276.64,146.4) and (280.4,150.16) .. (280.4,154.8) .. controls (280.4,159.44) and (276.64,163.2) .. (272,163.2) .. controls (267.36,163.2) and (263.6,159.44) .. (263.6,154.8) -- cycle ;
+        %Straight Lines [id:da7730534110074699] 
+        \draw  [dash pattern={on 4.5pt off 4.5pt}]  (149.2,136) -- (115.04,136) ;
+        %Straight Lines [id:da9136663274504719] 
+        \draw  [dash pattern={on 4.5pt off 4.5pt}]  (272,163.2) -- (115.04,163.2) ;
+        %Straight Lines [id:da07337903629559028] 
+        \draw    (120.64,139) -- (120.64,160.68) ;
+        \draw [shift={(120.64,163.68)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
+        \draw [shift={(120.64,136)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
+        
+        % Text Node
+        \draw (127.44,31) node [anchor=north west][inner sep=0.75pt]   [align=left] {initially};
+        % Text Node
+        \draw (250.64,31.4) node [anchor=north west][inner sep=0.75pt]   [align=left] {finally};
+        % Text Node
+        \draw (90,141) node [anchor=north west][inner sep=0.75pt]    {$\frac{mg}{k}$};
+        
+        
+        \end{tikzpicture}
+        
+        \end{center}
+
+        \[\text{Energy lost to surroundings}=\frac{1}{2}k\left(\frac{mg}{k}\right)^2\]
+        \begin{align*}
+            \text{Entropy change}&=\frac{\frac{1}{2}k\left(\frac{mg}{k}\right)^2}{T}\\
+            &=\frac{\frac{1}{2}(\qty{20}{\N\per\m})\left(\frac{(\qty{0.25}{\kg})(\qty{9.81}{\m\per\square\s})}{\qty{20}{\N\per\m}}\right)^2}{(273.15+27)\;\unit{\K}}\\
+            &=\boxed{\qty{5.01e-4}{\J\per\K}}
+        \end{align*}
+    \end{subsolution}
+    \tcblower
+    \begin{subsolution}
+        \begin{align*}
+            \text{Luminosity of Sun}=P_{\odot}&=(\qty{1.37e3}{\W\per\square\m})(4\pi(\qty{1.496e11}{\m})^2)\\
+            &=\qty{3.8530e26}{\W}
+        \end{align*}
+        From Stefan-Boltzmann law:
+        \begin{align*}
+            P_{\odot}&=\sigma(4\pi R_{\odot}^2)T_{\odot}^4\\
+            T_{\odot}&=\left(\frac{P_{\odot}}{\sigma(4\pi R_{\odot}^2)}\right)^{1/4}\\
+            &=\left(\frac{\qty{3.8530e26}{\W}}{(\qty{5.67e-8}{\W\m^{-2}\K^{-4}})(4\pi(\qty{6.957e8}{\m})^2)}\right)^{1/4}\\
+            &=\boxed{\qty{5780}{\K}}
+        \end{align*}
+    \end{subsolution}
+    \tcblower
+    \begin{subsolution}
+        Let Mars have radius $r_M$, orbital radius $R_M$ and temperature $T_M$. Hence,
+        \begin{align*}
+            \text{Energy absorbed}&=\frac{\pi r_M^2}{4\pi R_M^2}P_{\odot}\\
+            &=\frac{r_M^2}{4 R_M^2}P_{\odot}
+        \end{align*}
+        Mars also radiates energy:
+        \begin{align*}
+            \text{Energy radiated}&=\sigma(4\pi r_M^2)T_M^4
+        \end{align*}
+        At thermal equilibrium, these should be equal:
+        \begin{align*}
+            \frac{r_M^2}{4 R_M^2}P_{\odot}&=\sigma(4\pi r_M^2)T_M^4\\
+            T_M&=\left(\frac{P_{\odot}}{16\pi\sigma R_M^2}\right)^{1/4}\\
+            &=\left(\frac{\qty{3.8530e26}{\W}}{16\pi(\qty{5.67e-8}{\W\m^{-2}\K^{-4}})(\qty{2.280e11}{\m})^2}\right)^{1/4}\\
+            &=\boxed{\qty{226}{\K}}
+        \end{align*}
+    \end{subsolution}
+\end{solution}
+
+\begin{problem}
+    \begin{subproblem}
+        A particle of mass $\qty{0.1}{\kg}$ oscillates in simple harmonic motion about a point $O$. The force acting on the particle is $F=-10 x\;\unit{\N}$, where $x\;\unit{\m}$ is the displacement of the particle about $O$. The particle begins at a distance of $\qty{0.05}{\m}$ away from $O$ with speed $\sqrt{3}/2\;\unit{\m\per\s}$. Calculate:
+        \renewcommand{\theenumi}{(\alph{enumi})}
+        \begin{enumerate}
+            \item the amplitude
+            \item the initial phase
+            \item the maximum speed and acceleration of the particle\hfill{[4]}
+        \end{enumerate}
+    \end{subproblem}
+    \begin{subproblem}
+        A rod of length $L$ and uniform cross-section is partially submerged vertically in a liquid, with a length $h<L$ exposed above the liquid. Show that the rod exhibits simple harmonic motion when given a small displacement, and derive an expression for the period of the motion.
+    \hfill{[6]}\end{subproblem}
+\end{problem}
+
+\begin{solution}
+    \begin{subsolution}
+        The mass is $m=\qty{0.1}{\kg}$ and the ``spring constant'' is $k=\qty{10}{\N\per\m}$.
+        \renewcommand{\theenumi}{(\alph{enumi})}
+        \begin{enumerate}
+            \item The total energy is:
+            \begin{align*}
+                E&=\frac{1}{2}mv_0^2+\frac{1}{2}kx_0^2\\
+                &=\frac{1}{2}(\qty{0.1}{\kg})(\sqrt{3}/2\;\unit{\m\per\s})^2+\frac{1}{2}(\qty{10}{\N\per\m})(\qty{0.05}{\m})^2\\
+                &=\qty{0.0500}{\J}
+            \end{align*}
+            At \(x=x_{\mathrm{max}}\) where $x_{\mathrm{max}}$ is the amplitude, there is no kinetic energy:
+            \begin{align*}
+                E&=\frac{1}{2}kx_{\mathrm{max}}^2\\
+                x_{\mathrm{max}}&=\sqrt{\frac{2E}{k}}\\
+                &=\sqrt{\frac{2(\qty{0.0500}{\J})}{\qty{10}{\N\per\m}}}\\
+                &=\boxed{\qty{0.100}{\m}}
+            \end{align*}
+            \item The initial phase is given by:
+            \begin{align*}
+                \text{Phase}&=\cos^{-1}\left(\frac{x_0}{x_{\mathrm{max}}}\right)\\
+                &=\cos^{-1}\left(\frac{0.05}{0.1}\right)\\
+                &=\boxed{\frac{\pi}{3}\;\unit{\radian}}
+            \end{align*}
+            \item At the maximum speed, there is no elastic potential energy:
+            \begin{align*}
+                E&=\frac{1}{2}mv_{\mathrm{max}}^2\\
+                v_{\mathrm{max}}&=\sqrt{\frac{2E}{m}}\\
+                &=\sqrt{\frac{2(\qty{0.0500}{\J})}{\qty{0.1}{\kg}}}\\
+                &=\boxed{\qty{1.00}{\m\per\s}}
+            \end{align*}
+            The maximum acceleration is given by \(a_{\mathrm{max}}=\omega^2x_{\mathrm{max}}\), where $\omega$ is the angular velocity. Since \(\omega^2=\frac{k}{m}\):
+            \begin{align*}
+                a_{\mathrm{max}}&=\frac{k}{m}x_{\mathrm{max}}\\
+                &=\frac{\qty{10}{\N\per\m}}{\qty{0.1}{\kg}}(\qty{0.100}{\m})\\
+                &=\boxed{\qty{10.0}{\m\per\square\s}}
+            \end{align*}
+        \end{enumerate}
+    \end{subsolution}
+    \tcblower
+    \begin{subsolution}
+        Let the vertical displacement of the rod from the equilibrium position be $y$, with upwards being positive. Let the density of the rod be $\rho_r$, the density of the liquid be $\rho$ and the cross-sectional area of the rod be $A$.
+
+        At equilibrium, balancing the buoyant force and weight,
+
+        \begin{align*}
+            \rho A (L-h) g&=\rho_r A L g\\
+            \frac{L-h}{L}&=\frac{\rho_r}{\rho}
+        \end{align*}
+
+        With the displacement, length $h+y$ is now unsubmerged instead. The net force is now:
+        \begin{align*}
+            F_{\mathrm{net}}&=\rho A (L-h-y) g-\rho_r A L g\\
+            &=[\rho A (L-h) g-\rho_r A L g]-\rho A g y\\
+            &=-\rho A g y
+        \end{align*}
+        Since \(F_{\mathrm{net}}=\rho_r A L \ddot{y}\),
+        \begin{align*}
+            \rho_r A L \ddot{y}&=-\rho A g y\\
+            \ddot{y}&=-\frac{\rho}{\rho_r} \frac{g}{L} y\\
+            \ddot{y}&=-\frac{L}{L-h} \frac{g}{L} y\\
+            \ddot{y}&=-\frac{g}{L-h} y
+        \end{align*}
+        This is clearly the differential equation for simple harmonic motion, with angular velocity \(\omega=\sqrt{\frac{g}{L-h}}\). Since period \(T=\frac{2\pi}{\omega}\),
+        \begin{align*}
+            T&=\frac{2\pi}{\sqrt{\frac{g}{L-h}}}\\
+            &=\boxed{2\pi\sqrt{\frac{L-h}{g}}}
+        \end{align*}
+    \end{subsolution}
+\end{solution}
+
+\begin{problem}
+    \begin{subproblem}
+        The electric potential at the surface of a spherical oil droplet is $\qty{1000}{\V}$. If two such droplets of equal charge and radius coalesce to form a single spherical droplet, what is the electric potential at the surface of the resulting droplet? You may assume charge is conserved.
+    \hfill{[5]}\end{subproblem}
+    \begin{subproblem}
+        In a helium dilution refrigerator, ${}^{3}\mathrm{He}$ and ${}^{4}\mathrm{He}$ are mixed in a special chamber to obtain extremely low temperatures. The isotopes are sent through a Bainbridge mass spectrometer.
+        \renewcommand{\theenumi}{(\alph{enumi})}
+        \begin{enumerate}
+            \item The strengths of the electric and magnetic fields in the spectrometer are $\qty{100}{\V\per\m}$ and $\qty{0.2}{\tesla}$ respectively. Calculate the speed of an ion which passes successfully through the velocity filter.\hfill{[2]}
+            \item Deduce if the spectrometer can resolve the two isotopes if the exit slit of the velocity filter is $\qty{1}{\mm}$ wide.\hfill{[3]}
+        \end{enumerate}
+    \end{subproblem}
+\end{problem}
+
+\begin{solution}
+    \begin{subsolution}
+        Let the radius of 1 small droplet be $r$, and its charge be $q$. By symmetry, we can assume that the charge is distributed in a spherically symmetric manner within the oil droplet. Hence, the potential at the surface is given by:
+        \[V_0=\frac{1}{4\pi\epsilon_0}\frac{q}{r}=\qty{1000}{\V}\]
+        For the large oil droplet consisting of 2 small droplets, note that the total volume has to be conserved. Hence, the radius of the large droplet is \(\sqrt[3]{2}\,r\). Since charge is also conserved, the charge of the big droplet is \(2q\). Hence, the potential at the surface of the big drop is given by:
+        \begin{align*}
+            V&=\frac{1}{4\pi\epsilon_0}\frac{2q}{\sqrt[3]{2}\,r}\\
+            &=\frac{2}{\sqrt[3]{2}}\left(\frac{1}{4\pi\epsilon_0}\frac{q}{r}\right)\\
+            &=\sqrt[3]{4}\,(\qty{1000}{\V})\\
+            &=\boxed{\qty{1590}{\V}}
+        \end{align*}
+    \end{subsolution}
+    \tcblower
+    \begin{subsolution}
+        \renewcommand{\theenumi}{(\alph{enumi})}
+        \begin{enumerate}
+            \item The electric force is \(qE\) while the magnetic force is \(qvB\). To pass through the velocity selector, the 2 forces must balance out such that the particle will not get deflected. Hence,
+            \begin{align*}
+                qE&=qvB\\
+                v&=\frac{E}{B}\\
+                &=\frac{\qty{100}{\V\per\m}}{\qty{0.2}{\tesla}}\\
+                &=\boxed{\qty{500}{\m\per\s}}
+            \end{align*}
+            \item In a Bainbridge mass spectrometer, the centripetal force is provided by the magnetic field. The radius of curvature $r$ is hence:
+            \begin{align*}
+                qvB&=m\frac{v^2}{r}\\
+                r&=\frac{mv}{qB}
+            \end{align*}
+            Notice that ${}^{3}\mathrm{He}$ and ${}^{4}\mathrm{He}$ nuclei have the same mass-to-charge ratio. As such, since they have the same velocity, they have the same radius of curvature in the mass spectrometer, and thus $\boxed{\text{cannot}}$ be distinguished.
+        \end{enumerate}
+    \end{subsolution}
+\end{solution}
+
+\begin{problem}
+    \begin{subproblem}
+        A beam of monochromatic light of intensity $\qty{50}{\W\per\square\m}$ is incident normally onto a perfectly reflecting surface. Determine the pressure exerted on the surface.
+    \hfill{[5]}\end{subproblem}
+    \begin{subproblem}
+        Positronium is a bound hydrogenic system with an electron orbiting a positron. The positron has the same mass as an electron, but carries a charge of $+|e|$ instead of $-|e| .$ Calculate the shortest wavelength of the Lyman series of the positronium system.
+    \hfill{[5]}\end{subproblem}
+\end{problem}
+
+\begin{solution}
+    \begin{subsolution}
+        With intensity \(I=\qty{50}{\W\per\square\m}\) of light, let the area of the incident surface be $A$ and the frequency of the light be $f$.
+        \[\text{Total power}=IA\]
+        \[\text{Energy per photon}=hf\]
+        \[\text{Photons incident per second}=\frac{IA}{hf}\]
+        \[\text{Momentum change per photon}=\frac{2hf}{c}\]
+        \[\text{Total momentum change per second}=\frac{IA}{hf}\cdot \frac{2hf}{c}=\frac{2IA}{c}\]
+        \[\text{Total force}=\frac{2IA}{c}\]
+        \[\text{Pressure}=\boxed{\frac{2I}{c}}\]
+    \end{subsolution}
+    \tcblower
+    \begin{subsolution}
+        Since positrons and electrons have the same mass, they orbit about their centre of mass, which is at the midpoint of the line segment connecting the 2 particles. Let the radius of the orbits be $r$, since electrostatic attraction provides the centripetal force:
+        \[\frac{1}{4\pi\epsilon_0}\frac{e^2}{(2r)^2}=m\frac{v^2}{r}\]
+        Due to quantisation, the angular momentum $L$ has to be a positive integer multiple of $\hbar$, i.e. \(L=n\hbar\) for some integer $n>0$. Hence, \(2mvr=n\hbar\implies v=\frac{n\hbar}{2mr}\). Substituting, 
+        \begin{align*}
+            \frac{1}{4\pi\epsilon_0}\frac{e^2}{(2r)^2}&=\frac{m}{r}\left(\frac{n\hbar}{2mr}\right)^2\\
+            \frac{1}{4\pi\epsilon_0}\frac{e^2}{(2r)^2}&=\frac{mn^2\hbar}{r}\left(\frac{n\hbar}{2mr}\right)^2
+        \end{align*}
+    \end{subsolution}
+\end{solution}
+
+\begin{problem}
+    A projectile is fired with velocity $\qty{50}{\m\per\s}$ from the edge of a cliff, which is at a height of $\qty{100}{\m}$ above sea level. The projectile hits a target located at a horizontal distance of $\qty{300}{\m}$ from the base of the cliff (which is at sea level).
+    \begin{subproblem}
+        Calculate the angle of inclination at which the projectile was fired.
+    \hfill{[4]}\end{subproblem}
+    \begin{subproblem}
+        Suppose that instead, at the instant the projectile was fired, the target begins to move away from the cliff at a constant speed of $\qty{10}{\m\per\s}$. The angle of inclination remains the same as obtained in the previous part. Calculate the required initial speed of the projectile for it to hit the target.
+    \hfill{[5]}\end{subproblem}
+\end{problem}
+
+\begin{problem}
+    \begin{subproblem}
+        A source $\mathrm{S}$ and a detector $\mathrm{D}$ are placed $\qty{120}{\m}$ apart. S produces sound waves of wavelength $\qty{1.33}{\m}$. A reflecting surface parallel to the line joining S and D is initially placed $\qty{90}{\m}$ away as shown below.
+        
+        \begin{figure}[h]
+	        \centering
+        	\includegraphics[width=0.5\linewidth]{spho_book_TYS_images/2019q7.png}
+        	\label{2019q7}
+        \end{figure}
+        \noindent The sound waves directly from $\mathrm{S}$ and those reflected off the surface are found to be in phase at $\mathrm{D}$ and the intensity is at a maximum. The reflecting surface is then moved away from the line joining S and D by a distance $h$. How much should $h$ be for the intensity to be at the next maximum?
+    \hfill{[5]}\end{subproblem}
+    \begin{subproblem}
+        A sonometer wire has diameter $\qty{0.51}{\mm}$ and is made of a material of density $\qty{8.885e3}{\kg\per\cubic\m}$. It is stretched tightly over two bridges placed $\qty{60}{\cm}$ apart. The tension in the wire is produced by hanging a uniform metal cylinder of diameter $\qty{5.0}{\cm}$ and height $\qty{10.0}{\cm}$ from the free end of the wire. The metal cylinder is slowly lowered into a liquid until half its volume is immersed. It is found that when the sonometer wire is vibrating in its second harmonic mode, the frequency of vibration is $\qty{118.4}{\Hz}$. The metal cylinder is then completely immersed in the liquid. The new frequency of vibration of the second harmonic is $\qty{114.7}{\Hz}$. Calculate the densities of the metal cylinder and the liquid.
+    \hfill{[7]}\end{subproblem}
+\end{problem}
+
+\begin{problem}
+    \begin{subproblem}
+        A uniform hollowed sphere has inner and outer radii $r$ and $R$ respectively. Taking the gravitational potential at infinity to be zero, determine the ratio of the gravitational potential at the outer surface to that at the inner surface.
+    \hfill{[5]}\end{subproblem}
+    \begin{subproblem}
+        A uniform cylindrical copper rod of length $\qty{30.0}{\cm}$ and diameter $\qty{2.0}{\cm}$ is well-lagged such that the heat loss through the sides is negligible. One end of the rod is in thermal contact with a large heat reservoir maintained at temperature $\qty{200}{\degreeCelsius}$, while the other is in thermal contact with another large heat reservoir maintained at $\qty{0}{\degreeCelsius}$. Calculate the rate of change of entropy of the system. [The thermal conductivity of copper is $\qty{400}{\W\per\m\per\K}$.]
+    \hfill{[3]}\end{subproblem}
+    \begin{subproblem}
+        An electron, travelling at speed $\qty{2.08e6}{\m\per\s}$, collides with a stationary hydrogen atom with orbital angular momentum $\hbar$. Given that the energy levels of the hydrogen atom are
+        \[E_{n}=-\frac{13.6}{n^{2}}\;\mathrm{eV} \text { for } n \in \mathbb{N}\]
+        what are the possible wavelengths of the photons emitted by the hydrogen atom after the collision?
+    \hfill{[4]}\end{subproblem}
+\end{problem}
+
+\begin{problem}
+    \begin{subproblem}
+        A negatively-charged particle of mass $m$ and charge $-q$ is placed at the centre of a uniformly charged ring of radius $a$ and linear charge density $\lambda$. The particle is constrained to move along the central axis of the ring, and is displaced by a distance $x\ll a$ along the axis. Given that the electric field along the central axis at a distance $x$ from the centre of a ring of radius $a$ and charge $Q$ is
+        \[E=\frac{Q}{4 \pi \epsilon_{0}} \frac{x}{\left(a^{2}+x^{2}\right)^{\frac{3}{2}}}\]
+        show that the particle exhibits simple harmonic motion, and determine the oscillation frequency.
+    \hfill{[6]}\end{subproblem}
+    \begin{subproblem}
+        In the Bohr model of the hydrogen atom, when the atom is in its ground state, the electron orbits the stationary proton with radius $\qty{5.3e-11}{\m}$. The speed of the electron in the ground state orbit is $\qty{2.2e6}{\m\per\s}$. Determine the magnitude of the magnetic field at the centre of the orbit due to the electron.
+    \hfill{[3]}\end{subproblem}
+    \begin{subproblem}
+        A circular disc of radius $R$ and surface charge density $\sigma$ spins at a rate of $n$ revolutions per second. Determine the magnetic field at the centre of the disc.
+    \hfill{[3]}\end{subproblem}
+\end{problem}
+
+\begin{problem}
+    \begin{subproblem}
+        A particular event occurs at the origin of an inertial frame S at time $t=0$. Another event occurs at $x=\qty{4}{\cm}, y=z=0$, and $t=\qty{5}{\s}$ as measured in $\mathrm{S} .$ Determine the velocity of the inertial frame S', relative to S, in which the two events occur at the same point in space, as well as the time interval between the two events as measured by an observer in S'.
+    \hfill{[6]}\end{subproblem}
+    \begin{subproblem}
+        A cube of side length $l$ moves at a relativistic speed $u$ with one of its sides parallel to the $x$-axis of an inertial frame S. An observer moves along the $x$-axis of S with relativistic speed $v$. Derive an expression for the volume of the cube as measured by the observer.
+    \hfill{[6]}\end{subproblem}
+\end{problem}

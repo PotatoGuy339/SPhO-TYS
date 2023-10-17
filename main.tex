@@ -11,6 +11,7 @@
 \setlength{\headheight}{14.49998pt}
 \usepackage{siunitx}
 \usepackage{float}
+\tcbuselibrary{breakable}
 
 %temp
 \usepackage{lipsum}
@@ -22,6 +23,8 @@
 \newtheorem{subproblem}{}[section]
 \renewcommand{\thesubproblem}{(\roman{subproblem})}
 \newcommand{\github}{(insert github link here)}
+\allowdisplaybreaks
+
 
 
 \newtcolorbox{sol}[1]{
@@ -39,7 +42,9 @@
         title={
             Solution #1. \hfill 
         },
-        fonttitle=\bfseries
+        fonttitle=\bfseries,
+    %this lets the solution boxes go through page breaks
+        breakable 
     }
 
 \newcounter{solcounter}
@@ -61,9 +66,11 @@
 \begin{document}
 \include{_template_Qns}
 \include{_template_Sols}
-\include{2010Q}
-\include{2010S}
-\include{2011Q}
-\include{2019Q}
+% \include{2010Q}
+% \include{2010S}
+% \include{2011Q}
+% \include{2019Q}
+\include{2019S}
+
 
 \end{document}
