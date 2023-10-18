@@ -65,7 +65,7 @@
             &=\boxed{\frac{2v_0\cos \theta\sqrt{v_0^2\sin^2\theta-2gh}}{g}}
         \end{align*}
     \end{subsolution}
-    \tcblower
+    
     \begin{subsolution}
         At max range, \(\theta=\frac{\pi}{4}\). Hence,
         \begin{align*}
@@ -136,7 +136,7 @@
             &=\boxed{\qty{5.01e-4}{\J\per\K}}
         \end{align*}
     \end{subsolution}
-    \tcblower
+    
     \begin{subsolution}
         \begin{align*}
             \text{Luminosity of Sun}=P_{\odot}&=(\qty{1.37e3}{\W\per\square\m})(4\pi(\qty{1.496e11}{\m})^2)\\
@@ -150,7 +150,7 @@
             &=\boxed{\qty{5780}{\K}}
         \end{align*}
     \end{subsolution}
-    \tcblower
+    
     \begin{subsolution}
         Let Mars have radius $r_M$, orbital radius $R_M$ and temperature $T_M$. Hence,
         \begin{align*}
@@ -225,7 +225,7 @@
             \end{align*}
         \end{enumerate}
     \end{subsolution}
-    \tcblower
+    
     \begin{subsolution}
         Let the vertical displacement of the rod from the equilibrium position be $y$, with upwards being positive. Let the density of the rod be $\rho_r$, the density of the liquid be $\rho$ and the cross-sectional area of the rod be $A$.
 
@@ -283,7 +283,7 @@
             &=\boxed{\qty{1590}{\V}}
         \end{align*}
     \end{subsolution}
-    \tcblower
+    
     \begin{subsolution}
         \renewcommand{\theenumi}{(\alph{enumi})}
         \begin{enumerate}
@@ -324,14 +324,37 @@
         \[\text{Total force}=\frac{2IA}{c}\]
         \[\text{Pressure}=\boxed{\frac{2I}{c}}\]
     \end{subsolution}
-    \tcblower
+    
     \begin{subsolution}
         Since positrons and electrons have the same mass, they orbit about their centre of mass, which is at the midpoint of the line segment connecting the 2 particles. Let the radius of the orbits be $r$, since electrostatic attraction provides the centripetal force:
         \[\frac{1}{4\pi\epsilon_0}\frac{e^2}{(2r)^2}=m\frac{v^2}{r}\]
-        Due to quantisation, the angular momentum $L$ has to be a positive integer multiple of $\hbar$, i.e. \(L=n\hbar\) for some integer $n>0$. Hence, \(2mvr=n\hbar\implies v=\frac{n\hbar}{2mr}\). Substituting, 
+        The total energy is:
         \begin{align*}
+            E&=-\frac{1}{4\pi\epsilon_0}\frac{e^2}{2r}+2\cdot\frac{1}{2}mv^2\\
+            &=-\frac{1}{4\pi\epsilon_0}\frac{e^2}{2r}+\frac{1}{4\pi\epsilon_0}\frac{e^2}{(2r)^2}r\\
+            &=-\frac{1}{4}\frac{1}{4\pi\epsilon_0}\frac{e^2}{r}
+        \end{align*}
+        Quantum mechanics cause angular momentum to be quantised, i.e. \(L=2mvr=n\hbar\) for some positive integer $n$. Hence,
+        \begin{align*}
+            \frac{1}{4\pi\epsilon_0}\frac{e^2}{(2r)^2}&=m\frac{v^2}{r}\\
             \frac{1}{4\pi\epsilon_0}\frac{e^2}{(2r)^2}&=\frac{m}{r}\left(\frac{n\hbar}{2mr}\right)^2\\
-            \frac{1}{4\pi\epsilon_0}\frac{e^2}{(2r)^2}&=\frac{mn^2\hbar}{r}\left(\frac{n\hbar}{2mr}\right)^2
+            \frac{1}{4\pi\epsilon_0}\frac{e^2}{4r^2}&=\frac{n^2\hbar^2}{4mr^3}\\
+            \frac{re^2}{4\pi\epsilon_0}&=\frac{n^2\hbar^2}{m}\\
+            r&=\frac{4n^2\pi\epsilon_0\hbar^2}{me^2}
+        \end{align*}
+        Hence, the energy levels of positronium are:
+        \begin{align*}
+            E_n&=-\frac{1}{4}\frac{1}{4\pi\epsilon_0}\frac{e^2}{\frac{4n^2\pi\epsilon_0\hbar^2}{me^2}}\\
+            &=-\frac{me^4}{4(4\pi\epsilon_0)^2\hbar^2}\frac{1}{n^2}\\
+            &=-\frac{me^4}{4(4\pi\epsilon_0)^2(h/2\pi)^2}\frac{1}{n^2}\\
+            &=-\frac{me^4}{16\epsilon_0^2h^2}\frac{1}{n^2}
+        \end{align*}
+        The Lyman series are formed from the energy gaps between $n$th energy level and the first energy level. The shortest wavelength of the Lyman series corresponds to the highest such energy gap, i.e. from $n=\infty$ to $n=1$. The energy of the photon is:
+        \begin{align*}
+            \Delta E&=0-\left(-\frac{me^4}{16\epsilon_0^2h^2}\frac{1}{1^2}\right)\\
+            \frac{hc}{\lambda}&=\frac{me^4}{16\epsilon_0^2h^2}\\
+            \lambda&=\frac{16\epsilon_0^2h^3c}{me^4}\\
+            &=\boxed{\qty{1.84e-7}{\m}}
         \end{align*}
     \end{subsolution}
 \end{solution}
@@ -345,6 +368,87 @@
         Suppose that instead, at the instant the projectile was fired, the target begins to move away from the cliff at a constant speed of $\qty{10}{\m\per\s}$. The angle of inclination remains the same as obtained in the previous part. Calculate the required initial speed of the projectile for it to hit the target.
     \hfill{[5]}\end{subproblem}
 \end{problem}
+
+\begin{solution}
+    \begin{subsolution}
+        Let angle of inclination be $\theta$, and define initial velocity $v$, initial height $h$, distance travelled $d$. The equations of motion are: 
+        \begin{center}
+            \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt   
+            \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Shape: Rectangle [id:dp8125487463325323] 
+\draw   (85.27,119.4) -- (131.27,119.4) -- (131.27,271.4) -- (85.27,271.4) -- cycle ;
+%Straight Lines [id:da590274113107366] 
+\draw    (85.27,271.4) -- (209.27,271.4) -- (374.03,271.4) ;
+%Shape: Circle [id:dp15358225120231328] 
+\draw   (86,94) .. controls (86,80.19) and (97.19,69) .. (111,69) .. controls (124.81,69) and (136,80.19) .. (136,94) .. controls (136,107.81) and (124.81,119) .. (111,119) .. controls (97.19,119) and (86,107.81) .. (86,94) -- cycle ;
+%Straight Lines [id:da10893818069705241] 
+\draw    (111,94) -- (176.51,58.36) ;
+\draw [shift={(178.27,57.4)}, rotate = 151.45] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Curve Lines [id:da7551160610212571] 
+\draw    (138.03,80.1) .. controls (146.03,82.1) and (145.03,89.1) .. (142.03,95.1) ;
+%Straight Lines [id:da9910599215761069] 
+\draw    (111,94) -- (164.03,95.33) ;
+%Curve Lines [id:da6831867709769025] 
+\draw    (111,94) .. controls (312.03,-18.45) and (343.03,246.55) .. (350.03,270.55) ;
+%Straight Lines [id:da3348584680612259] 
+\draw    (141.03,186.3) -- (141.03,121.3) ;
+\draw [shift={(141.03,119.3)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da6544715734718208] 
+\draw    (141.03,204.7) -- (141.03,267.7) ;
+\draw [shift={(141.03,269.7)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da1542254213666031] 
+\draw    (252.17,263.1) -- (340.23,263.1) ;
+\draw [shift={(342.23,263.1)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da5461877624170522] 
+\draw    (231.17,263.9) -- (149.83,263.9) ;
+\draw [shift={(147.83,263.9)}, rotate = 360] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+% Text Node
+\draw (137,186.4) node [anchor=north west][inner sep=0.75pt]    {$h$};
+% Text Node
+\draw (147.63,76.1) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$\theta $};
+% Text Node
+\draw (172.63,39.1) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$v$};
+% Text Node
+\draw (237,253.6) node [anchor=north west][inner sep=0.75pt]    {$d$};
+
+
+\end{tikzpicture}
+        \end{center}
+    
+        \begin{align}
+            0 &= -\frac{1}{2}gt^2 + vt\sin\theta + h \\
+            d &= vt\cos\theta 
+        \end{align}
+        Sub $t$ in:
+        \begin{align}
+        0 &= -\frac{1}{2}g\left(\frac{d}{v\cos\theta}\right)^2 + \sin\theta\frac{d}{\cos\theta} \tan\theta + h \\
+        &= -\frac{gd^2}{2v^2}\sec^2\theta  + d\tan\theta + h \\
+        &= -\frac{gd^2}{2v^2} \tan^2\theta + d\tan\theta + \left(h -\frac{gd^2}{v^2}\right)
+        \end{align}
+        Solving the equation, we get:
+        \[\tan\theta = \frac{v^2 d\pm \sqrt{d^4 \left(-g^2\right)+2 d^2 g h v^2+v^4d^2}}{d^2 g}\]
+        \[\theta = \boxed{\qty{17.4}{\degree} \text{ or } \qty{54.2}{\degree}}\]
+    \end{subsolution}
+    \begin{subsolution}
+        The situation is analogous to having a projectile with horizontal velocity $u=\qty{10}{\m\per\s}$ less than the actual. The same equations become: 
+        \begin{align}
+            0 &= -\frac{1}{2}gt^2 + vt\sin\theta + h \\
+            d &= vt\cos\theta - ut
+        \end{align}
+        Solve for $v$: 
+        \begin{align*}
+            0 &= -\frac{1}{2}g\left(\frac{d}{v\cos\theta-u}\right)^2 + v\sin\theta\left(\frac{d}{v\cos\theta-u}\right) + h\\
+            0 &= -\frac{1}{2}gd^2 + vd\sin\theta\left(v\cos\theta-u\right) + h(v\cos\theta-u)^2\\
+            0 &= (d\sin\theta\cos\theta+h\cos^2\theta)v^2 - (ud\sin\theta+2hu\cos\theta)v\\
+            &\qquad+ \left(hu^2-\frac{1}{2}gd^2\right)
+        \end{align*}
+        Solving the equation using both values of $\theta$, we can obtain:
+        \[v=\boxed{\qty{58.0}{\m\per\s}\text{ or }\qty{60.7}{\m\per\s}}\]
+    \end{subsolution}
+\end{solution}
 
 \begin{problem}
     \begin{subproblem}
@@ -361,6 +465,27 @@
         A sonometer wire has diameter $\qty{0.51}{\mm}$ and is made of a material of density $\qty{8.885e3}{\kg\per\cubic\m}$. It is stretched tightly over two bridges placed $\qty{60}{\cm}$ apart. The tension in the wire is produced by hanging a uniform metal cylinder of diameter $\qty{5.0}{\cm}$ and height $\qty{10.0}{\cm}$ from the free end of the wire. The metal cylinder is slowly lowered into a liquid until half its volume is immersed. It is found that when the sonometer wire is vibrating in its second harmonic mode, the frequency of vibration is $\qty{118.4}{\Hz}$. The metal cylinder is then completely immersed in the liquid. The new frequency of vibration of the second harmonic is $\qty{114.7}{\Hz}$. Calculate the densities of the metal cylinder and the liquid.
     \hfill{[7]}\end{subproblem}
 \end{problem}
+
+\begin{solution}
+    \begin{subsolution}
+        Let $\delta$ denote the difference in lengths of the 2 paths. By moving the reflector by a distance $h$, $\delta$ changes by:
+        \[\Delta\delta=2\sqrt{60^2+(90+h)^2}-2\sqrt{60^2+90^2}\]
+        For the intensity to be at the next maximum, we want \(\Delta\delta=\lambda\):
+        \[1.33=2\sqrt{60^2+(90+h)^2}-2\sqrt{60^2+90^2}\]
+        Solving,
+        \[h=\boxed{\qty{0.798}{\m}}\]
+    \end{subsolution}
+    \begin{subsolution}
+        Let the diameter of the wire be $\delta$, its density be $\rho_w$, the distance between the bridges be $L$, the radius of the metal cylinder be $r$ and the height of the metal cylinder be $h$. Also let the frequency with half the cylinder immersed be $f_1$ and the frequency with the entire cylinder immersed be $f_2$. Finally, let the densities of the metal cylinder and the liquid be $\rho_c$ and $\rho_l$ respectively.
+
+        When the cylinder is half immersed, the tension is:
+        \begin{align*}
+            T_1&=\rho_c\pi r^2 h g - \rho_l \pi r^2 \frac{h}{2} g\\
+            &=\pi r^2 h g \left(\rho_c-\frac{\rho_l}{2}\right)
+        \end{align*}
+        For a wave in a string, the speed is \(\_
+    \end{subsolution}
+\end{solution}
 
 \begin{problem}
     \begin{subproblem}
@@ -389,6 +514,91 @@
         A circular disc of radius $R$ and surface charge density $\sigma$ spins at a rate of $n$ revolutions per second. Determine the magnetic field at the centre of the disc.
     \hfill{[3]}\end{subproblem}
 \end{problem}
+
+\begin{solution}
+    \begin{subsolution}
+        For $x\ll a$, we have:
+        \begin{align*}
+            \left(a^2+x^2\right)^{-3/2}&=a^{-3}\left(1+\left(\frac{x}{a}\right)^2\right)^{-3/2}\\
+            &=a^{-3}\left(1-\frac{3}{2}\left(\frac{x}{a}\right)^2+\dots\right)
+        \end{align*}
+        making use of the binomial series. Hence,
+        \begin{align*}
+            E&=\frac{Q}{4 \pi \epsilon_0}\frac{x}{\left(a^{2}+x^{2}\right)^{\frac{3}{2}}}\\
+            &=\frac{Q}{4 \pi \epsilon_0 a^3}\left(x-\frac{3}{2}x\left(\frac{x}{a}\right)^2+\dots\right)\\
+            &\approx \frac{Q}{4 \pi \epsilon_0 a^3}x\\
+            &=\frac{2\pi a \lambda}{4 \pi \epsilon_0 a^3}x\\
+            &=\frac{\lambda}{2\epsilon_0 a^2}x
+        \end{align*}
+        where we drop all the higher-order terms. Hence, the force is given by:
+        \begin{align*}
+            F&=-qE\\
+            m\ddot{x}&=-\frac{q\lambda}{2\epsilon_0 a^2}x\\
+            \ddot{x}&=-\frac{q\lambda}{2\epsilon_0 a^2m}x
+        \end{align*}
+        This is evidently the differential equation for simple harmonic motion, with angular frequency \(\omega=\sqrt{\frac{q\lambda}{2\epsilon_0 a^2m}}\). Since oscillation frequency is given by \(f=\frac{\omega}{2\pi}\),
+        \[f=\boxed{\frac{1}{2\pi}\sqrt{\frac{q\lambda}{2\epsilon_0 a^2m}}}\]
+    \end{subsolution}
+    \begin{subsolution}
+        The magnetic field in the centre of a current loop with radius $r$ and current $I$ is:
+        \[B=\frac{\mu_0I}{2r}\]
+        For an electron, since the frequency of its orbit is \(\frac{v}{2\pi r}\), there is \(-e\frac{v}{2\pi r}\) charge passing through the same point of the orbit per second, i.e. the magnitude of the current is \(\frac{ev}{2\pi r}\).
+
+        Hence, the magnetic field at the centre is:
+        \begin{align*}
+            B&=\frac{\mu_0}{2r}\cdot\frac{ev}{2\pi r}\\
+            &=\frac{\mu_0ev}{4\pi r^2}\\
+            &=\boxed{\qty{12.5}{\tesla}}
+        \end{align*}
+    \end{subsolution}
+    \begin{subsolution}
+        Consider a ring of charge at a distance of $r$ from the centre.
+        \begin{center}
+            \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+            
+            \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1.2,xscale=1.2]
+            %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+            
+            %Shape: Circle [id:dp5248755417135192] 
+            \draw   (214,148.4) .. controls (214,97.92) and (254.92,57) .. (305.4,57) .. controls (355.88,57) and (396.8,97.92) .. (396.8,148.4) .. controls (396.8,198.88) and (355.88,239.8) .. (305.4,239.8) .. controls (254.92,239.8) and (214,198.88) .. (214,148.4) -- cycle ;
+            %Shape: Circle [id:dp3249520012677508] 
+            \draw   (240.5,148.4) .. controls (240.5,112.56) and (269.56,83.5) .. (305.4,83.5) .. controls (341.24,83.5) and (370.3,112.56) .. (370.3,148.4) .. controls (370.3,184.24) and (341.24,213.3) .. (305.4,213.3) .. controls (269.56,213.3) and (240.5,184.24) .. (240.5,148.4) -- cycle ;
+            %Shape: Circle [id:dp5777364977657019] 
+            \draw   (244.75,148.4) .. controls (244.75,114.9) and (271.9,87.75) .. (305.4,87.75) .. controls (338.9,87.75) and (366.05,114.9) .. (366.05,148.4) .. controls (366.05,181.9) and (338.9,209.05) .. (305.4,209.05) .. controls (271.9,209.05) and (244.75,181.9) .. (244.75,148.4) -- cycle ;
+            %Straight Lines [id:da10410272427772949] 
+            \draw    (305.4,148.4) -- (305.4,59) ;
+            \draw [shift={(305.4,57)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da17348965899382773] 
+            \draw    (305.4,148.4) -- (357.9,122.78) ;
+            \draw [shift={(359.7,121.9)}, rotate = 153.99] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            %Straight Lines [id:da19044172966251582] 
+            \draw    (305.4,148.4) -- (366.25,133.86) ;
+            \draw [shift={(368.2,133.4)}, rotate = 166.57] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+            
+            % Text Node
+            \draw (292.5,95.4) node [anchor=north west][inner sep=0.75pt]    {$R$};
+            % Text Node
+            \draw (324.5,119.9) node [anchor=north west][inner sep=0.75pt]    {$r$};
+            % Text Node
+            \draw (314,143.9) node [anchor=north west][inner sep=0.75pt]    {$r+\mathrm{d} r$};
+            
+            
+            \end{tikzpicture}
+            
+        \end{center}
+        There is $2\pi r \sigma\,\mathrm{d}r$ of charge within the ring, and does $n$ rotations per second. Hence, the current is $\mathrm{d}I=2n\pi r \sigma\,\mathrm{d}r$. The magnetic field due to this current is:
+        \begin{align*}
+            \mathrm{d}B&=\frac{\mu_0}{2r}\,\mathrm{d}I\\
+            &=\frac{\mu_0}{2r}2n\pi r \sigma\,\mathrm{d}r\\
+            &=\mu_0 n\pi \sigma\,\mathrm{d}r
+        \end{align*}
+        Integrating,
+        \begin{align*}
+            B&=\int_{0}^{R}\mu_0 n\pi \sigma\,\mathrm{d}r\\
+            &=\boxed{\pi\mu_0 n\sigma R}
+        \end{align*}
+    \end{subsolution}
+\end{solution}
 
 \begin{problem}
     \begin{subproblem}

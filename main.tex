@@ -20,7 +20,16 @@
 \pagestyle{fancy}
 \theoremstyle{definition}
 \newtheorem{problem}[section]{Question}
-\newtheorem{subproblem}{}[section]
+
+
+\newenvironment{subproblemalph}{
+    \renewcommand{\theenumi}{(\alph{enumi})}
+    \begin{enumerate}}{
+\end{enumerate}
+}
+
+
+\newtheorem{subproblem}{}[problem]
 \renewcommand{\thesubproblem}{(\roman{subproblem})}
 \newcommand{\github}{(insert github link here)}
 \allowdisplaybreaks
@@ -71,6 +80,8 @@
 % \include{2011Q}
 % \include{2019Q}
 \include{2019S}
+\include{2021Q}
+\include{2021S}
 
 
 \end{document}
