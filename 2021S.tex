@@ -21,12 +21,12 @@
 
 \vspace{2cm}
 
-{\Large Edited/Proofread by: Keith Chan, Sun Yu Chieh}
+{\Large Edited/Proofread by: Keith Chan, Sun Yu Chieh, Nigel Heng}
 %Collaborators please feel free to add on!
 
 \vspace{2cm}
 
-{\Large Solutions by: Tan Chien Hao, Keith Chan, Sun Yu Chieh}
+{\Large Solutions by: Tan Chien Hao, Keith Chan, Sun Yu Chieh, Nigel Heng}
 %Collaborators please feel free to add on!
 
 \vspace{2cm}
@@ -139,7 +139,7 @@
     In both cases, the work required is the same since the electric field is conservative.
     \end{subsolution}
     \begin{subsolution}
-    (same)
+    (see previous part)
     \end{subsolution}
 \end{solution}
 
@@ -200,7 +200,7 @@
         It is the same as the heat generated in the rod, which provides some guarantee of your answer. 
     \end{subsolution}
 \end{solution}
-
+\newpage
 \begin{problem}
     In the figure shown, after the switch S is closed at time $t = 0$, the emf of the source is automatically adjusted to maintain a constant current $I$ through S.
     \begin{figure}[H]
@@ -217,23 +217,36 @@ inductor? \hfill $[1]$
 \end{problem}
 
 \begin{solution}
-    There is constant current $I$ at S. Thus, current at resistor $I_R = I - I_L$, where $I_L$ is the current at the inductor.
-    The inductor's PD equation is: 
-    \[V_L = L \frac{\D I_L}{\D t}\]
-    The resistor's PD equation is:
-    \[V_R = R I_R\]
-    Using voltage loop, 
-    \begin{align}
-    L \frac{\D I_L}{\D t} &= R I_R \\
-    \frac{\D I_L}{\D t} &= \frac{\D I - I_R}{\D t} = -\frac{\D I_R}{\D t} \\
-    -L \frac{\D I_R}{\D t} &= R I_R \\
-    \int \frac{1}{I_R} \D I_R &= -\int \frac{R}{L} \D t \\
-    \ln{\frac{I_R}{C}} &= -RLt
-    \end{align}
-    When $t=0$, $I_R = 0$, since all the current just flows through the L branch. 
+    \begin{subsolution}
+        There is constant current $I$ at S. Thus, current at resistor $I_R = I - I_L$, where $I_L$ is the current at the inductor.
+        The inductor's PD equation is: 
+        \[V_L = -L \frac{\D I_L}{\D t}\]
+        The resistor's PD equation is:
+        \[V_R = R I_R\]
+        Using voltage loop, 
+        \begin{align}
+            L \frac{\D I_L}{\D t} &= R I_R \\
+            \frac{\D I_L}{\D t} &= \frac{\D(I - I_R)}{\D t} = -\frac{\D I_R}{\D t} \\
+            -L \frac{\D I_R}{\D t} &= R I_R \\
+            \int \frac{1}{I_R} \D I_R &= -\int \frac{R}{L} \D t \\
+            \ln{\frac{I_R}{C}} &= -\frac{R}{L}t
+        \end{align}
+        for some constant $C$. When $t=0$, $I_R = I$, since all the current flows through the resistor branch. Hence, $C=I$ and:
+        \[I_R=I{e}^{-(R/L)t}\]
+        \[I_L=\boxed{I\left(1-{e}^{-(R/L)t}\right)}\]
+    \end{subsolution}
+    \begin{subsolution}
+        Equating $I_R$ and $I_L$,
+        \begin{align*}
+            I{e}^{-(R/L)t}&=I\left(1-{e}^{-(R/L)t}\right)\\
+            2I{e}^{-(R/L)t}&=I\\
+            -\frac{R}{L}t&=-\ln 2\\
+            t&=\boxed{\frac{L}{R}\ln 2}
+        \end{align*}
+    \end{subsolution}
 \end{solution}
 
-%might want to check my work -Nigel
+\newpage
 
 \begin{problem}
     In the figure shown, a string, tied to a sinusoidal oscillator at P and running over a support at Q, is stretched by a block of mass m. The separation L between P and Q is $\qty{1.20}{\m}$, and the frequency f of the oscillator is fixed at $\qty{120}{\Hz}$. The amplitude of the motion at P is small enough for that point to be considered a node. A node also exists at Q. A standing wave appears when the mass of the hanging block is $\qty{286.1}{\g}$ or $\qty{447.0}{\g}$, but not for any intermediate mass. What is the linear density of the string? \hfill $[6]$
@@ -409,5 +422,52 @@ inductor? \hfill $[1]$
         At the lowest point in the rotation, gravity works to pull the mass directly towards the edge. Hence when calculating the lowest angular velocity, we should consider the forces on the mass when it is at its lowest point along the rotation, and set $r_0 = R$. Hence:
         \[k_t(R-r_0')-mg\sin\varphi = mR\omega^2\]
         \[\boxed{\omega = \sqrt{\frac{k_t(R-r_0')-mg\sin\varphi}{mR}}}\]
+    \end{subsolution}
+\end{solution}
+\newpage
+
+\begin{problem}
+    Consider Young’s double slit experiment as shown in the below figure (a). Monochromatic light is being used. Further assume that the screen distance $l$ is much larger than the slit separation $d$ (Figure (b))
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width = 0.8\textwidth]{spho_book_TYS_images/2021SPhO_10.png}
+    \end{figure}
+    \begin{subproblemalph}
+        \item Under what condition does Young’s experiment show interference pattern? \hfill $[0.5]$
+        \item Determine the conditions for obtaining constructive and destructive interference. \hfill $[2]$
+        \item Determine the distance $\Delta y$ between adjacent fringes (maxima), assuming that $\theta$ (Figure (b)) is small. \hfill $[2]$
+        \item Determine the intensity $I$ of the diffraction pattern’s maxima. You may use \[\sin\alpha + \sin\beta = 2 \cos\frac{1}{2}\left(\alpha-\beta\right)\sin\frac{1}{2}\left(\alpha+\beta\right)\] \hfill $[4.5]$
+    \end{subproblemalph}
+\end{problem}
+
+\begin{solution}
+    \begin{subsolution}
+        The light waves entering the slits must be coherent.
+    \end{subsolution}
+    \begin{subsolution}
+        Constructive interference:
+        \[d\sin\theta=n\lambda\]
+        Destructive interference:
+        \[d\sin\theta=\left(n+\frac{1}{2}\right)\lambda\]
+        where $n$ is some integer.
+    \end{subsolution}
+    \begin{subsolution}
+        For small $\theta$, $\sin \theta\approx \frac{y}{l}$, where $y$ is the distance from the central maxima. Hence, for 2 adjacent fringes:
+        \begin{align*}
+            d\cdot \frac{\Delta y}{l}&=\lambda\\
+            \Delta y&=\frac{\lambda l}{d}
+        \end{align*}
+    \end{subsolution}
+    \begin{subsolution}
+        If we let the light wave reaching the screen from one of the slits to be described by \(E=E_0\sin(\omega t)\), then the other wave from the other slit is \(E=E_0\sin\left(\omega t+\frac{2\pi d\sin\theta}{\lambda}\right)\), since the phase difference between the 2 waves is \(\frac{2\pi d\sin\theta}{\lambda}\). Hence, adding up the waves:
+        \begin{align*}
+            E_{\mathrm{total}}&=E_0\sin(\omega t)+E_0\sin\left(\omega t+\frac{2\pi d\sin\theta}{\lambda}\right)\\
+            &=2E_0\cos\frac{1}{2}\left(\frac{2\pi d\sin\theta}{\lambda}\right)\sin\frac{1}{2}\left(2\omega t+\frac{2\pi d\sin\theta}{\lambda}\right)\\
+            &=2E_0\cos\left(\frac{\pi d\sin\theta}{\lambda}\right)\sin\left(\omega t+\frac{\pi d\sin\theta}{\lambda}\right)
+        \end{align*}
+        The combined amplitude of the wave is therefore:
+        \[E_{\mathrm{total},0}=2E_0\cos\left(\frac{\pi d\sin\theta}{\lambda}\right)\]
+        If we let the initial intensity of light be $I_0=kE_0^2$ and the final intensity of light be $I_t=kE_{\mathrm{total},0}^2$ for some constant $k$, we get:
+        \[I_t=\boxed{4I_0\cos^2\left(\frac{\pi d\sin\theta}{\lambda}\right)}\]
     \end{subsolution}
 \end{solution}
