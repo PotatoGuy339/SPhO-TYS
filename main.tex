@@ -13,6 +13,8 @@
 \usepackage{float}
 \tcbuselibrary{breakable}
 
+\renewcommand{\D}{\mathrm{d}}
+
 %temp
 \usepackage{lipsum}
 %temp
@@ -66,9 +68,9 @@
        \end{sol}
  }
 
-\newtheorem{subsolution}{}[problem]
+\newtheorem{subsolution}{}[solcounter]
 \renewcommand{\thesubsolution}{(\roman{subsolution})}
-    
+
 
 \newtheorem{test}[section]{Test}
 

@@ -133,7 +133,7 @@
         \begin{align*}
             \text{Entropy change}&=\frac{\frac{1}{2}k\left(\frac{mg}{k}\right)^2}{T}\\
             &=\frac{\frac{1}{2}(\qty{20}{\N\per\m})\left(\frac{(\qty{0.25}{\kg})(\qty{9.81}{\m\per\square\s})}{\qty{20}{\N\per\m}}\right)^2}{(273.15+27)\;\unit{\K}}\\
-            &=\boxed{\qty{5.01e-4}{\J\per\K}}
+            &=\boxed{\qty{5.01e-4}{\J\per\K}}\text{ (3 s.f.)}
         \end{align*}
     \end{subsolution}
     
@@ -147,7 +147,7 @@
             P_{\odot}&=\sigma(4\pi R_{\odot}^2)T_{\odot}^4\\
             T_{\odot}&=\left(\frac{P_{\odot}}{\sigma(4\pi R_{\odot}^2)}\right)^{1/4}\\
             &=\left(\frac{\qty{3.8530e26}{\W}}{(\qty{5.67e-8}{\W\m^{-2}\K^{-4}})(4\pi(\qty{6.957e8}{\m})^2)}\right)^{1/4}\\
-            &=\boxed{\qty{5780}{\K}}
+            &=\boxed{\qty{5780}{\K}}\text{ (3 s.f.)}
         \end{align*}
     \end{subsolution}
     
@@ -166,7 +166,7 @@
             \frac{r_M^2}{4 R_M^2}P_{\odot}&=\sigma(4\pi r_M^2)T_M^4\\
             T_M&=\left(\frac{P_{\odot}}{16\pi\sigma R_M^2}\right)^{1/4}\\
             &=\left(\frac{\qty{3.8530e26}{\W}}{16\pi(\qty{5.67e-8}{\W\m^{-2}\K^{-4}})(\qty{2.280e11}{\m})^2}\right)^{1/4}\\
-            &=\boxed{\qty{226}{\K}}
+            &=\boxed{\qty{226}{\K}}\text{ (3 s.f.)}
         \end{align*}
     \end{subsolution}
 \end{solution}
@@ -280,7 +280,7 @@
             V&=\frac{1}{4\pi\epsilon_0}\frac{2q}{\sqrt[3]{2}\,r}\\
             &=\frac{2}{\sqrt[3]{2}}\left(\frac{1}{4\pi\epsilon_0}\frac{q}{r}\right)\\
             &=\sqrt[3]{4}\,(\qty{1000}{\V})\\
-            &=\boxed{\qty{1590}{\V}}
+            &=\boxed{\qty{1590}{\V}}\text{ (3 s.f.)}
         \end{align*}
     \end{subsolution}
     
@@ -354,7 +354,7 @@
             \Delta E&=0-\left(-\frac{me^4}{16\epsilon_0^2h^2}\frac{1}{1^2}\right)\\
             \frac{hc}{\lambda}&=\frac{me^4}{16\epsilon_0^2h^2}\\
             \lambda&=\frac{16\epsilon_0^2h^3c}{me^4}\\
-            &=\boxed{\qty{1.84e-7}{\m}}
+            &=\boxed{\qty{1.84e-7}{\m}}\text{ (3 s.f.)}
         \end{align*}
     \end{subsolution}
 \end{solution}
@@ -430,7 +430,7 @@
         \end{align}
         Solving the equation, we get:
         \[\tan\theta = \frac{v^2 d\pm \sqrt{d^4 \left(-g^2\right)+2 d^2 g h v^2+v^4d^2}}{d^2 g}\]
-        \[\theta = \boxed{\qty{17.4}{\degree} \text{ or } \qty{54.2}{\degree}}\]
+        \[\theta = \boxed{\qty{17.4}{\degree} \text{ or } \qty{54.2}{\degree}}\text{ (3 s.f.)}\]
     \end{subsolution}
     \begin{subsolution}
         The situation is analogous to having a projectile with horizontal velocity $u=\qty{10}{\m\per\s}$ less than the actual. The same equations become: 
@@ -446,7 +446,7 @@
             &\qquad+ \left(hu^2-\frac{1}{2}gd^2\right)
         \end{align*}
         Solving the equation using both values of $\theta$, we can obtain:
-        \[v=\boxed{\qty{58.0}{\m\per\s}\text{ or }\qty{60.7}{\m\per\s}}\]
+        \[v=\boxed{\qty{58.0}{\m\per\s}\text{ or }\qty{60.7}{\m\per\s}}\text{ (3 s.f.)}\]
     \end{subsolution}
 \end{solution}
 
@@ -473,17 +473,38 @@
         For the intensity to be at the next maximum, we want \(\Delta\delta=\lambda\):
         \[1.33=2\sqrt{60^2+(90+h)^2}-2\sqrt{60^2+90^2}\]
         Solving,
-        \[h=\boxed{\qty{0.798}{\m}}\]
+        \[h=\boxed{\qty{0.798}{\m}}\text{ (3 s.f.)}\]
     \end{subsolution}
     \begin{subsolution}
-        Let the diameter of the wire be $\delta$, its density be $\rho_w$, the distance between the bridges be $L$, the radius of the metal cylinder be $r$ and the height of the metal cylinder be $h$. Also let the frequency with half the cylinder immersed be $f_1$ and the frequency with the entire cylinder immersed be $f_2$. Finally, let the densities of the metal cylinder and the liquid be $\rho_c$ and $\rho_l$ respectively.
+        Let the diameter of the wire be $\delta$, its density be $\rho_w$, the distance between the bridges be $L$, the diameter of the metal cylinder be $D$ and the height of the metal cylinder be $h$. Also let the frequency with half the cylinder immersed be $f_1$ and the frequency with the entire cylinder immersed be $f_2$. Finally, let the densities of the metal cylinder and the liquid be $\rho_c$ and $\rho_l$ respectively.
 
         When the cylinder is half immersed, the tension is:
         \begin{align*}
-            T_1&=\rho_c\pi r^2 h g - \rho_l \pi r^2 \frac{h}{2} g\\
-            &=\pi r^2 h g \left(\rho_c-\frac{\rho_l}{2}\right)
+            T_1&=\rho_c\pi \frac{D^2}{4} h g - \rho_l \pi \frac{D^2}{4} \frac{h}{2} g\\
+            &=\pi \frac{D^2}{4}h g \left(\rho_c-\frac{\rho_l}{2}\right)
         \end{align*}
-        For a wave in a string, the speed is \(\_
+        For a wave in a string, the speed is \(v=\sqrt{\frac{T}{\mu}}\), where \(\mu=\frac{\pi}{4}\delta^2\rho_w\) is the mass per unit length. Since the oscillations are in the second harmonic mode, the wavelength is $L$. Therefore,
+        \begin{align*}
+            v_1&=f_1 L\\
+            \sqrt{\frac{T_1}{\mu}}&= f_1 L\\
+            T_1&=\frac{\pi}{4}\delta^2\rho_w f_1^2 L^2\\
+            \pi \frac{D^2}{4} h g \left(\rho_c-\frac{\rho_l}{2}\right)&=\frac{\pi}{4}\delta^2\rho_w f_1^2 L^2\\
+            \rho_c-\frac{\rho_l}{2}&=\frac{\delta^2\rho_w f_1^2 L^2}{D^2hg}
+        \end{align*}
+        Similarly, when the cylinder is fully immersed,
+        \begin{align*}
+            T_2&=\rho_c\pi \frac{D^2}{4} h g - \rho_l \pi \frac{D^2}{4} h g\\
+            v_2^2 \mu &= \pi \frac{D^2}{4}h g \left(\rho_c-\rho_l\right)\\
+            f_2^2L^2\frac{\pi}{4}\delta^2\rho_w &= \pi \frac{D^2}{4}h g \left(\rho_c-\rho_l\right)\\
+            \rho_c-\rho_l&=\frac{\delta^2\rho_w f_2^2 L^2}{D^2hg}
+        \end{align*}
+        Solving the 2 equations:
+        \begin{align*}
+            \rho_l&=\frac{2\delta^2\rho_w \left(f_1^2-f_2^2\right) L^2}{D^2hg}\\
+            &=\boxed{\qty{585}{\kg\per\cubic\m}}\text{ (3 s.f.)}\\
+            \rho_c&=\frac{\delta^2\rho_w \left(2f_1^2-f_2^2\right)L^2}{D^2hg}\\
+            &=\boxed{\qty{5050}{\kg\per\cubic\m}}\text{ (3 s.f.)}
+        \end{align*}
     \end{subsolution}
 \end{solution}
 
@@ -500,6 +521,68 @@
         what are the possible wavelengths of the photons emitted by the hydrogen atom after the collision?
     \hfill{[4]}\end{subproblem}
 \end{problem}
+
+\begin{solution}
+    \begin{subsolution}
+        Consider the hollowed sphere as a superposition of one sphere with radius $R$ and density $\rho$, and another with radius $r$ and density $-\rho$. The potential on the outer sphere is therefore:
+        \begin{align*}
+            \Phi(R)&=-\frac{G\left(\frac{4}{3}\pi R^3 \rho\right)}{R}-\frac{G\left(\frac{4}{3}\pi r^3 (-\rho)\right)}{R}\\
+            &=-\frac{4\pi G \rho}{3}\left(R^2-\frac{r^3}{R}\right)
+        \end{align*}
+        The gravitational field inside a solid sphere with density $\rho$ and radius $R$ at a distance of $s$ from the centre can be computed with Gauss's law:
+        \begin{align*}
+            4\pi s^2 g&=4\pi G\left(\frac{4}{3}\pi s^3 \rho\right)\\
+            g&=\frac{4}{3}\pi G \rho 
+        \end{align*}
+        The potential is:
+        \begin{align*}
+            \Phi(s)&=-\int_{s}^{\infty}g(s')\,\mathrm{d}s'\\
+            &=-\int_{s}^{R}\frac{4}{3}\pi G \rho s'\,\mathrm{d}s' + \Phi(R)\\
+            &=\frac{2}{3}\pi G \rho (s^2-R^2)-\frac{4G\pi R^2 \rho}{3}\\
+            &=\frac{2}{3}\pi G \rho (s^2-3R^2)
+        \end{align*}
+        Therefore, the potential at the inner sphere is:
+        \begin{align*}
+            \Phi(r)&=\frac{2}{3}\pi G \rho (r^2-3R^2)+\frac{G\left(\frac{4}{3}\pi r^3 (-\rho)\right)}{r}\\
+            &=\frac{2}{3}\pi G \rho (r^2-3R^2)-\frac{G\left(\frac{4}{3}\pi r^3 (-\rho)\right)}{r}\\
+            &=\frac{2}{3}\pi G \rho (r^2-3R^2)+\frac{4}{3}\pi G \rho r^2\\
+            &=-2\pi G \rho (R^2-r^2)
+        \end{align*}
+        The ratio of potentials is therefore:
+        \begin{align*}
+            \frac{\Phi(R)}{\Phi(r)}&=\frac{\frac{4\pi G\rho}{3}\left(R^2-\frac{r^3}{R}\right)}{2\pi G \rho (R^2-r^2)}\\
+            &=\boxed{\frac{2\left(R^3-r^3\right)}{3R(R^2-r^2)}}
+        \end{align*}
+    \end{subsolution}
+    \begin{subsolution}
+        Let the length of the rod be $L$, the diameter be $D$, the thermal conductivity be $\kappa$, and the temperatures of the hot and cold reservoirs be $T_1$ and $T_2$ respectively. The rate of heat transfer is:
+        \[\frac{\mathrm{d}Q}{\mathrm{d}t}&=\kappa \frac{\pi D^2}{4L} (T_1-T_2)\]
+        The rate of entropy change in the hot reservoir is:
+        \[\frac{\mathrm{d}S_1}{\mathrm{d}t}=-\frac{1}{T_1}\frac{\mathrm{d}Q}{\mathrm{d}t}=-\kappa \frac{\pi D^2}{4L} \left(1-\frac{T_2}{T_1}\right)\]
+        The rate of entropy change in the cold reservoir is:
+        \[\frac{\mathrm{d}S_2}{\mathrm{d}t}=\frac{1}{T_2}\frac{\mathrm{d}Q}{\mathrm{d}t}=\kappa \frac{\pi D^2}{4L}\left(\frac{T_1}{T_2}-1\right)\]
+        The total rate of entropy change is therefore:
+        \begin{align*}
+            \frac{\mathrm{d}S}{\mathrm{d}t}&=\frac{\mathrm{d}S_1}{\mathrm{d}t}+\frac{\mathrm{d}S_2}{\mathrm{d}t}\\
+            &=-\kappa \frac{\pi D^2}{4L} \left(1-\frac{T_2}{T_1}\right)+\kappa \frac{\pi D^2}{4L}\left(\frac{T_1}{T_2}-1\right)\\
+            &=\kappa \frac{\pi D^2}{4L} \left(\frac{T_1}{T_2}+\frac{T_2}{T_1}-2\right)\\
+            &=\boxed{\qty{0.130}{\J\per\K\per\s}}\text{ (3 s.f.)}
+        \end{align*}
+    \end{subsolution}
+    \begin{subsolution}
+        At orbital angular momentum $\hbar$, the hydrogen atom is in the ground state. The kinetic energy of the electron is:
+        \[E=\frac{1}{2}m_e v^2\approx \qty{12.317}{\eV}\text{ (5 s.f.)}\]
+        This energy is enough to excite the hydrogen atom to 3rd energy level ($n=3$). Hence, the possible photons emitted have energies:
+        \begin{align*}
+            E_{31}&=(\qty{13.6}{\eV})\left(1-\frac{1}{9}\right) & E_{32}&=(\qty{13.6}{\eV})\left(\frac{1}{4}-\frac{1}{9}\right) & E_{21}&=(\qty{13.6}{\eV})\left(1-\frac{1}{4}\right)\\
+            &=\qty{12.089}{\eV} & &=\qty{1.8889}{\eV} & &=\qty{10.200}{\eV}\text{ (5 s.f.)}
+        \end{align*}
+        Using \(E=\frac{hc}{\lambda}\), we can calculate the possible wavelengths:
+        \begin{align*}
+            \lambda_{31}&=\boxed{\qty{1.03e-7}{\m}} & \lambda_{32}&=\boxed{\qty{6.58e-7}{\m}} & \lambda_{21}&=\boxed{\qty{1.22e-7}{\m}}\text{ (3 s.f.)}
+        \end{align*}
+    \end{subsolution}
+\end{solution}
 
 \begin{problem}
     \begin{subproblem}
@@ -608,3 +691,21 @@
         A cube of side length $l$ moves at a relativistic speed $u$ with one of its sides parallel to the $x$-axis of an inertial frame S. An observer moves along the $x$-axis of S with relativistic speed $v$. Derive an expression for the volume of the cube as measured by the observer.
     \hfill{[6]}\end{subproblem}
 \end{problem}
+
+\begin{solution}
+    \begin{subsolution}
+        Clearly, none of the speeds here are relativistic. Hence, we can just use Galilean relativity:
+        \[\text{Velocity of S'}=\frac{\qty{4}{\cm}}{\qty{5}{\s}}=\boxed{\qty{8.00e-3}{\m\per\s}}\]
+        \[\text{Time interval}=\boxed{\qty{5.00}{\s}}\]
+        \textit{Author's note: If you take into account special relativity, the time interval deviates by an amount on the order of magnitude of $\qty{e-21}{\s}$, so basically negligible}
+    \end{subsolution}
+    \begin{subsolution}
+        The speed of the cube in the frame of the observer is given by:
+        \[\frac{v-u}{1-\frac{uv}{c^2}}\]
+        Only the side of the cube parallel to the direction of motion would be length contracted. Hence, the volume is:
+        \begin{align*}
+            \text{Volume}&=l^3\sqrt{1-\left(\frac{\frac{v-u}{1-\frac{uv}{c^2}}}{c}\right)^2}\\
+            &=\boxed{l^3\sqrt{1-\left(\frac{c^2(v-u)}{c\left(c^2-uv\right)}\right)^2}}
+        \end{align*}
+    \end{subsolution}
+\end{solution}
